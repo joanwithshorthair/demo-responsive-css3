@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="gb2312">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" /><!-- 自动调整网页宽度，页面禁止缩放 -->
+	<title>Responsive Web Design-CSS3</title>
+	<link rel="stylesheet" type="text/css" href="mobileDeviceStyle.css" media="only screen and (max-width:480px)" /><!-- 外部样式表响应式布局写法 -->
+	<style>
+	@media screen and (min-width:480px){/*内联样式响应式布局写法*/
+	
+	*{
+		margin:0;
+		padding:0;
+		font: normal 100% Helvetica, Arial, sans-serif;/*响应式布局字体大小初始设定*/
+	}
+	
+	html,body{/*设置了html和body的高度才能设置其所有子元素的高度*/
+		background:#bfe1eb;
+		height:100%;
+	}
+	
+	div#allContent{
+		width:100%;
+		margin:auto;
+	}
+	
+	header,section,aside,footer{
+		background:snow;
+	}
+	
+	header{
+		margin:auto;
+		width:97%;
+		line-height:3em;
+		text-align:center;
+		font-size:2em;
+	}
+	
+	div#table{/*用table显示保证左右两个div高度一致*/
+		display:table;
+		width:100%;
+		border-spacing:1em;
+	}
+	
+	div#tableRow{
+		display:table-row;
+	}
+	
+	section#main{
+		display:table-cell;
+		width:60%;
+		text-align:center;
+	}
+	
+	img{/*图像大小自适应*/
+		display:block;
+		width:100%;
+		height:auto;
+		max-width:100%;
+	}
+	
+	aside{
+		display:table-cell;
+
+	}
+	
+	footer{
+		margin:auto;
+		width:97%;
+		line-height:3em;
+		font-size:0.7em;
+		text-align:center;
+		clear:left;
+	}
+	</style>
+</head>
+<body>
+	<div id="allContent">
+		<header>This is header</header>
+	  <div id="table">
+	  <div id="tableRow">
+		<section id="main">Main content goes here
+			<img title="courtyard" src="a.jpg" alt="courtyard" />
+		</section>
+		<aside>This is a sidebar</aside>
+	  </div><!-- end tableRow -->
+	  </div><!-- end table -->	
+		<footer>This is footer</footer>
+	</div>
+	
+<!-- 笔记：
+	常见的属性：device-width,device-height -- 设备物理宽高(px)
+				 width,height -- 视窗宽高
+				 orientation -- 设备方向
+				 resolution -- 设备分辨率(dpi)(比如retina屏)	 -->		 
+</body>
+</html>

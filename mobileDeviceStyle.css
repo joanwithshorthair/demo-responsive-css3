@@ -1,0 +1,67 @@
+	*{
+		margin:0;
+		padding:0;
+		font: normal 100% Helvetica, Arial, sans-serif;/*响应式布局字体大小初始设定*/
+	}
+	
+	html,body{/*设置了html和body的高度才能设置其所有子元素的高度*/
+		background:#bfe1eb;
+		height:100%;
+	}
+	
+	div#allContent{
+		width:100%;
+		margin:auto;
+	}
+	
+	header,section,aside,footer{
+		background:snow;
+	}
+	
+	header{
+		margin:auto;
+		width:97%;
+		line-height:3em;
+		text-align:center;
+		font-size:2em;
+	}
+	
+	section#main{/*因为这里的section不是table-cell样式，vertical-align:middle不起作用*/
+		position:relative;
+		margin:0.5em auto;
+		width:97%;
+		height:30em;
+		text-align:center;
+		overflow:hidden;
+
+	}
+	
+	img{
+		position:absolute;
+		margin:auto;
+		left:-9999px;
+		right:-9999px;
+		top:-9999px;
+		bottom:-9999px;
+		
+		width:85%;
+		height:auto;
+		max-width:100%;
+	}
+	
+	aside{
+		height:10em;
+		margin:0.5em auto;
+		width:97%;
+		text-align:center;
+
+	}
+	
+	footer{
+		margin:auto;
+		width:97%;
+		line-height:3em;
+		font-size:0.7em;
+		text-align:center;
+		clear:left;
+	}
